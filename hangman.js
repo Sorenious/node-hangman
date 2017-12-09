@@ -72,9 +72,9 @@ var inquirer = require("inquirer");
 					//   }, 1000);
 					// }
 					remainingGuesses -= 1;
-					if (remainingGuesses === 0) {
-						gameover = true;
-					}
+				}
+				if (remainingGuesses === 0) {
+					gameOver = true;
 				}
 				previousGuesses();
 				guessAgain();
@@ -96,7 +96,7 @@ var inquirer = require("inquirer");
 					}
 				}
 				if (blankWord.indexOf("_") < 0) {
-					gameover = true;
+					gameOver = true;
 				}
 				previousGuesses();
 				guessAgain();
@@ -117,7 +117,7 @@ var inquirer = require("inquirer");
 
 	    // 	}
 	    // };
-
+	    //console.log(gameOver);
 		if (!gameOver) {
 			inquirer.prompt([
 				{
@@ -184,9 +184,9 @@ var inquirer = require("inquirer");
 	      //   // }
 	      // }
 
-		if (gameover && blankWord.indexOf("_") < 0) {
+		if (gameOver && blankWord.indexOf("_") < 0) {
 			console.log("YOU WIN!!");
-		} else if (gameover && remainingGuesses === 0) {
+		} else if (gameOver && remainingGuesses === 0) {
 			blankWordFill = "";
 			for (var i = 0; i < testWord.word.length; i++) {
 				if (testWord.word[i] === " ") {
