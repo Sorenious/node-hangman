@@ -1,0 +1,22 @@
+{
+  "name": "node-hangman",
+  "version": "1.0.0",
+  "description": "Hangman game for node",
+  "main": "hangman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sorenious/node-hangman.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sorenious/node-hangman/issues"
+  },
+  "homepage": "https://github.com/Sorenious/node-hangman#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
